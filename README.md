@@ -35,8 +35,8 @@ Follow these steps to run the project locally:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/nextjs-scalable-architecture.git
-cd nextjs-scalable-architecture
+git clone https://github.com/xxrom/li-next
+cd li-next
 ```
 
 ### 2. Install Dependencies
