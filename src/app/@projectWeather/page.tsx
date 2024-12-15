@@ -1,3 +1,3 @@
-export default function Home() {
+export default function Weather() {
   return <div>Project Weather</div>;
 }

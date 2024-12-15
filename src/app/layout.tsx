@@ -1,25 +1,27 @@
-import type { JSX } from 'react';
+import type { ReactNode } from 'react';
 
-import projectOne from './@projectOne/page';
-import projectTwo from './@projectTwo/page';
-import projectWeather from './@projectWeather/page';
+export default function Layout({
+  projectOne,
+  projectTwo,
+  projectWeather,
+}: {
+  projectOne: ReactNode;
+  projectTwo: ReactNode;
+  projectWeather: ReactNode;
+}) {
+  const PROJECT = process.env.PROJECT || 'projectOne';
 
-export default function RootLayout() {
-  const PROJECT = process.env.PROJECT || 'blog';
-
-  const projects: Record<string, () => JSX.Element> = {
+  const projects: Record<string, ReactNode> = {
     projectOne,
     projectTwo,
     projectWeather,
   };
 
-  const CurrentProject = projects[PROJECT] || projects['projectOne'];
+  const currentProject = projects[PROJECT] || projects['projectOne'];
 
   return (
     <html lang='en'>
-      <body>
-        <CurrentProject />
-      </body>
+      <body>{currentProject}</body>
     </html>
   );
 }
