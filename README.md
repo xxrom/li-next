@@ -23,7 +23,7 @@ app/
     page.tsx
 components/          # Shared components
 utils/               # Shared utilities
-ui-kit/              # Shared UI elements
+ui/                  # Shared UI elements
 .env                 # Environment variable file
 ```
 
@@ -41,7 +41,7 @@ cd nextjs-scalable-architecture
 ### 2. Install Dependencies
 
 ```bash
-npm install
+yarn
 ```
 
 ### 3. Configure the Environment Variable
@@ -57,7 +57,7 @@ Replace `projectOne` with `projectTwo` or `projectWeather` to switch between pro
 ### 4. Run the Development Server
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 Visit `http://localhost:3000` in your browser to see the selected project layout.
@@ -114,11 +114,3 @@ export default function NewProject() {
   return <div>Welcome to the New Project</div>;
 }
 ```
-
-## Contributing
-
-Feel free to fork this repository and contribute improvements or examples for additional features.
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
